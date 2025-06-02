@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog Simples</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Meu Blog Incrível</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="blog-posts">
+            <article class="post-card">
+                <h2>Título do Primeiro Post</h2>
+                <p class="post-meta">Publicado em 01 de Junho de 2025 por Autor do Blog</p>
+                <img src="https://via.placeholder.com/600x300?text=Imagem+do+Post+1" alt="Imagem do Post 1">
+                <p>Este é o resumo do primeiro post do meu blog. Aqui você pode escrever uma breve introdução sobre o que o leitor encontrará no artigo completo. É importante que seja cativante!</p>
+                <a href="#" class="read-more">Leia Mais &raquo;</a>
+            </article>
+
+            <article class="post-card">
+                <h2>Dicas para Programar Melhor</h2>
+                <p class="post-meta">Publicado em 28 de Maio de 2025 por Desenvolvedor Genial</p>
+                <img src="https://via.placeholder.com/600x300?text=Imagem+do+Post+2" alt="Imagem do Post 2">
+                <p>Descubra algumas dicas essenciais para aprimorar suas habilidades de programação e escrever códigos mais limpos e eficientes. A prática leva à perfeição!</p>
+                <a href="#" class="read-more">Leia Mais &raquo;</a>
+            </article>
+
+            <article class="post-card">
+                <h2>Receita de Bolo de Fubá da Vovó</h2>
+                <p class="post-meta">Publicado em 25 de Maio de 2025 por Mestre Culinário</p>
+                <img src="https://via.placeholder.com/600x300?text=Imagem+do+Post+3" alt="Imagem do Post 3">
+                <p>Quem não ama um bom bolo de fubá? Compartilho aqui a receita secreta da minha avó, perfeita para o café da tarde. Simples, rápido e delicioso!</p>
+                <a href="#" class="read-more">Leia Mais &raquo;</a>
+            </article>
+        </section>
+
+        <aside class="sidebar">
+            <h3>Categorias</h3>
+            <ul>
+                <li><a href="#">Tecnologia</a></li>
+                <li><a href="#">Culinária</a></li>
+                <li><a href="#">Viagens</a></li>
+                <li><a href="#">Estilo de Vida</a></li>
+            </ul>
+
+            <h3>Sobre Mim</h3>
+            <p>Olá! Sou [Seu Nome] e este é meu espaço para compartilhar ideias, conhecimentos e um pouco da minha vida. Fique à vontade para explorar!</p>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Meu Blog Simples. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden; /* Para limpar floats */
+}
+
+/* Header (Cabeçalho) */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    display: inline-block; /* Para o h1 e nav ficarem na mesma linha ou próximos */
+    vertical-align: middle;
+}
+
+header nav {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+header ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header ul li a:hover {
+    color: #ffd700; /* Amarelo ouro ao passar o mouse */
+}
+
+/* Main Content (Conteúdo Principal) */
+main {
+    padding: 20px 0;
+    display: flex; /* Para layout de duas colunas */
+    flex-wrap: wrap; /* Permite que as colunas quebrem em telas pequenas */
+    gap: 20px; /* Espaçamento entre as colunas */
+}
+
+.blog-posts {
+    flex: 3; /* Ocupa 3 partes do espaço disponível */
+    min-width: 60%; /* Garante um tamanho mínimo */
+}
+
+.sidebar {
+    flex: 1; /* Ocupa 1 parte do espaço disponível */
+    min-width: 250px; /* Garante um tamanho mínimo */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #555;
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px dotted #eee;
+}
+
+.sidebar ul li a:hover {
+    color: #0056b3;
+}
+
+/* Post Card */
+.post-card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.post-card h2 {
+    color: #0056b3;
+    margin-top: 0;
+}
+
+.post-card .post-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.post-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.post-card p {
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+/* Footer (Rodapé) */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Colunas empilham em telas menores */
+    }
+    .blog-posts, .sidebar {
+        min-width: unset; /* Remove o min-width para telas pequenas */
+        width: 100%;
+    }
+}
